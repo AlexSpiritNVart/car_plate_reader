@@ -1,0 +1,41 @@
+streams:
+  - "video_2025-06-22_19-51-47.mp4"  # Example path or RTSP url
+cam_ids:
+  - 1
+path_to_detect_model: "models/detect_model.pt"  # detector weights path
+path_to_read_model: "my_letters_weights_v2.weights.h5"  # OCR weights path
+telegram_bot_token: "YOUR_TELEGRAM_BOT_TOKEN"
+telegram_chat_id: "YOUR_CHAT_ID"
+detection_confidence: 0.5
+number_detections_to_send: 2
+backend_adress: "http://localhost:8000/api"  # optional backend
+# Optional additional settings
+align: false
+gpu_number: "0"
+detector_framework: "yolo"
+from_top: 0
+repeat: 1
+debug: "0"
+id_to_char:
+  0: '0'
+  1: '1'
+  2: '2'
+  3: '3'
+  4: '4'
+  5: '5'
+  6: '6'
+  7: '7'
+  8: '8'
+  9: '9'
+  10: 'A'
+  11: 'B'
+  12: 'C'
+  13: 'E'
+  14: 'H'
+  15: 'K'
+  16: 'M'
+  17: 'O'
+  18: 'P'
+  19: 'T'
+  20: 'X'
+  21: 'Y'
