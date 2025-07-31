@@ -1,7 +1,7 @@
 import numpy as np
 # from recognizer.model_maker import build_ocr_model
 from typing import Any, Dict, Optional
-from try1 import build_ocr_model
+from ocr_model_maker import build_ocr_model
 
 class PlateRecognizer:
     def __init__(
