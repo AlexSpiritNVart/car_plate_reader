@@ -19,8 +19,7 @@ class VideoStreamReader:
         self.thread.start()
 
     def _reader(self):
-        # cap = cv2.VideoCapture(self.stream_url)
-        cap = cv2.VideoCapture('C:\\Users\\Alexander\\PycharmProjects\\car_plate_reader_best_ever\\video_2025-06-22_19-51-47.mp4')
+        cap = cv2.VideoCapture(self.stream_url)
 
         if not cap.isOpened():
             if self.logger:
