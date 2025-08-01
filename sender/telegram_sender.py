@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from io import BytesIO
 from typing import Any, Tuple, Optional
-from utils_in_code.logger import log as logger
+from utils_in_code.logger import log as default_logger
 
 class TelegramSender:
     def __init__(
@@ -14,7 +14,8 @@ class TelegramSender:
     ):
         self.bot_token = bot_token
         self.chat_id = chat_id
-        self.logger = logger or logger
+        # use provided logger or fallback to default logger from utils_in_code
+        self.logger = logger or default_logger
         self.api_url = f"https://api.telegram.org/bot{bot_token}/sendPhoto"
 
     def send_plate_data(
